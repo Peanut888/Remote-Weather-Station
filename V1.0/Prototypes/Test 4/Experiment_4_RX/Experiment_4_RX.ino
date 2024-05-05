@@ -77,8 +77,8 @@ DateTime now;
 */
 
 RH_RF95 rfm95(RFM95_CS, RFM95_IRQ); // Decalre RFM95 radio object.
-RTC_DS3231 rtc;
-Adafruit_SSD1351 oled = Adafruit_SSD1351(SCREEN_WIDTH, SCREEN_HEIGHT, &SPI, CS_PIN, DC_PIN, RST_PIN);
+RTC_DS3231 rtc; // Declare the DS3231 RTC object.
+Adafruit_SSD1351 oled = Adafruit_SSD1351(SCREEN_WIDTH, SCREEN_HEIGHT, &SPI, CS_PIN, DC_PIN, RST_PIN); // Decalre the SSD1351 OLED driver object.
 /*
  *---------------------------------------------*
  * Add any object decalrations here.           *
