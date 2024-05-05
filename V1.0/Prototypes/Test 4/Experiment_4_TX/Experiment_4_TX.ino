@@ -63,7 +63,7 @@ RH_RF95 rfm95(RFM95_CS, RFM95_IRQ); // Declare RFM95 radio object.
 Adafruit_SHTC3 shtc3 = Adafruit_SHTC3(); // Declare SHTC3 sensor object.
 Adafruit_BMP3XX bmp388; // Declare BMP388 sensor object.
 DFRobot_SGP40 sgp40(&Wire); // Declare SGP40 sensor object.
-RTC_DS3231 rtc;
+RTC_DS3231 rtc; // Declare DS3231 RTC object.
 /*
  *---------------------------------------------*
  * Add any object decalrations here.           *
