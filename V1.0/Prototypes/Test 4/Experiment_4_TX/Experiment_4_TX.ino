@@ -217,6 +217,8 @@ float calcUVIndex() {
   int readVal = 0;
   float UVIndex = 0.0;
 
+  readVal = analogRead(UVSensorPin); // Read the voltage signal from the UV sensor.
+
   // Calculate the UV index based on the anlogue values.
   if (readVal <= 10) { // UV Index 0.
     UVIndex = 0.0;
