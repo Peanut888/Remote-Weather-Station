@@ -288,6 +288,7 @@ void CreateMessage()
   memcpy(data + 3 * sizeof(float), &altitude, sizeof(float));
   memcpy(data + 4 * sizeof(float), &UVIndex, sizeof(float));
   memcpy(data + 5 * sizeof(float), &airQuality, sizeof(float));
+  memcpy(data + 6 * sizeof(float), &id_timestamp, sizeof(float)); // uint32_t is 32 bits, (floats are 32 bits)
   // Calculate the current timestamp rounded to the nearest TIME_WINDOW second for synchronization.
   uint32_t current_timestamp = round(unix_time / TIME_WINDOW) * TIME_WINDOW;
   // Construct the expected device hash string using ALLOWED_MAC, UNIX time, PASSKEY.
@@ -298,11 +299,9 @@ void CreateMessage()
   }
   // Generate the expected device hash for comparison
   uint8_t *expected_hash_buffer = generateHash(expected_string.c_str());
-  memcpy(data  + 6 * sizeof(float), expected_hash_buffer, 16);
+  memcpy(data  + 7 * sizeof(float), expected_hash_buffer, 16);
   // Free allocated memory to store the hash
   delete[] expected_hash_buffer;
-  memcpy(data + 10 * sizeof(float), &unix_time, 4);
-  memcpy(data + 11 * sizeof(float), &id_timestamp, 4);
 }
 
 
