@@ -13,4 +13,5 @@ This project's objective is to build a remote weather station to that has the ab
 ## Comments:
 - Experiments 1 to 8 are the gradual steps that were took to build the prototype (v0.99).
 - Since we are now working with a new microcontroller, the entire code needs to be reworked. However, use the previous code as a guide to help you develop your code.
-![Weather Station Base (Server-side) Flowchart v1.1.PDF](https://github.com/Peanut888/Remote-Weather-Station/files/15286887/Weather.Station.Base.Server-side.Flowchart.v1.1.PDF)
+## Weather Station Base (Server-side) Flowchart
+For an overview of the server-side flowchart, you can refer to the [Weather Station Base (Server-side) Flowchart v1.1 PDF](https://github.com/Peanut888/Remote-Weather-Station/files/15286887/Weather.Station.Base.Server-side.Flowchart.v1.1.PDF).
