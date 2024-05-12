@@ -378,7 +378,7 @@ bool validateData(uint8_t* data)
  * Returns:
  *   String: The reconstructed MD5 hash string.
  */
-String reconstructHash(uint8_t* hashBuffer)
+String reconstructHash(uint8_t* hashBuffer) // **REVIST THIS FUNCTION (USE MEMCPY)**//
 {
   String hash = "";
   for (int i = 0; i < HASH_SIZE; i++)
@@ -505,6 +505,15 @@ bool receiveAcknowledgement()
 
 void writeToSdcard(uint8_t* data)
 {
+  float humidity, temperature, pressure, altitude, UVIndex, airQuality;
+  uint32_t timestamp;
+  memcpy(&humidity, data, sizeof(float)); 
+  memcpy(&temperature, data + sizeof(float), sizeof(float)); 
+  memcpy(&pressure, data + 2 * sizeof(float), sizeof(float)); 
+  memcpy(&altitude, data + 3 * sizeof(float), sizeof(float)); 
+  memcpy(&UVIndex, data + 4 * sizeof(float), sizeof(float)); 
+  memcpy(&airQuality, data + 5 * sizeof(float), sizeof(float)); 
+  memcpy(&timestamp, data + 6 * sizeof(float), 4);
 
 }
 /*
