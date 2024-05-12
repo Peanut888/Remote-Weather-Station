@@ -291,7 +291,11 @@ void CreateMessage()
   // Calculate the current timestamp rounded to the nearest TIME_WINDOW second for synchronization.
   uint32_t current_timestamp = round(unix_time / TIME_WINDOW) * TIME_WINDOW;
   // Construct the expected device hash string using ALLOWED_MAC, UNIX time, PASSKEY.
-  String expected_string = MAC_ADDRESS + ':' + String(current_timestamp) + ':' + PASSKEY + '|' + String(humidity) + '|' + String(temperature) + '|' + String(pressure) + '|' + String(altitude) + '|' + String(UVIndex) + '|' + String(airQuality);
+  String expected_string = MAC_ADDRESS + ':' + String(current_timestamp) + ':' + PASSKEY;
+  for (int i = 0; i < 24; i++)
+  {
+    expected_string += '|' + String(data[i]);
+  }
   // Generate the expected device hash for comparison
   uint8_t *expected_hash_buffer = generateHash(expected_string.c_str());
   memcpy(data  + 6 * sizeof(float), expected_hash_buffer, 16);
