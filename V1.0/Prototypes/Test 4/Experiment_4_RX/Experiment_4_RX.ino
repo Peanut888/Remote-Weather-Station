@@ -1,7 +1,7 @@
 /*
  * Programmer: Justin Lam
  * Date: 03/05/24
- * Description: Receive humidity and temeprature, pressure, altitude, and air quality data via Lo-Ra radio, and time stamp the data
+ * Description: Receive humidity and temeprature, pressure, altitude, and air quality, UV index data via Lo-Ra radio, and time stamp the data
  *              and display data onto an OLED display.
 */
 
