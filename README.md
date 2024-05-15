@@ -10,7 +10,7 @@ This project's objective is to build a remote weather station to that has the ab
 6. DS3231 RTC Module
 7. SSD1351 OLED Module
 8. Adafruit Industries Feather M0
-9. SparFun Weather Meter Kit
+9. SparkFun Weather Meter Kit
 ## Comments:
 - Experiments 1 to 8 are the gradual steps that were took to build the prototype (v0.99).
 - Since we are now working with a new microcontroller, the entire code needs to be reworked. However, use the previous code as a guide to help you develop your code.
